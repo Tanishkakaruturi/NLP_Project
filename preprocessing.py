@@ -18,8 +18,6 @@ def fast_preprocess_text(text):
 df['preprocessed_text'] = df['text'].apply(fast_preprocess_text)
 output_path = r"C:\Users\tanis\Downloads\preprocessed_dataset.xlsx"
 df.to_excel(output_path, index=False)
-
-print("Preprocessing complete! Cleaned dataset saved at:", output_path)
 print(df[['text', 'preprocessed_text']].head()) 
 
 
