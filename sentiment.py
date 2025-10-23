@@ -3,8 +3,8 @@ from textblob import TextBlob
 file_path = r"C:\Users\tanis\Downloads\preprocessed_dataset.xlsx"  
 df = pd.read_excel(file_path)
 def get_sentiment(text):
-    analysis = TextBlob(str(text))  # Convert to string to avoid errors
-    polarity = analysis.sentiment.polarity  # Polarity score (-1 to 1)
+    analysis = TextBlob(str(text)) 
+    polarity = analysis.sentiment.polarity
     if polarity > 0:
         return "Positive"
     elif polarity == 0:
